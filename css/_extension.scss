@@ -1,0 +1,85 @@
+.extension {
+     margin-top: 255px;
+     &-title {
+          color: $Very-Dark-Blue;
+          font-weight: 500;
+          font-size: 20px;
+     }
+     &-desc {
+          color: $Grayish-Blue;
+     }
+     &-list {
+          margin-top: 45px;
+          display: grid;
+          grid-template-columns: 285px 285px 285px;
+          grid-template-rows: 45px 45px 306px 45px 45px;
+          grid-gap: 0px 35px;
+          justify-content: center;
+     }
+
+     &-item {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          border-radius: 5px;
+          box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+          cursor: pointer;
+          transition: all 0.2s linear;
+     }
+     &-item:hover {
+          box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+          & .button {
+               background-color: white;
+               color: $Soft-Blue !important;
+               border: 2px solid $Soft-Blue;
+          }
+     }
+     &-item:nth-child(1) {
+          grid-column: 1/2;
+          grid-row: 1/4;
+     }
+
+     &-item:nth-child(2) {
+          grid-column: 2/3;
+          grid-row: 2/5;
+     }
+     &-item:nth-child(3) {
+          grid-column: 3/4;
+          grid-row: 3/6;
+     }
+     &-image {
+          margin-top: 50px;
+          margin-bottom: 35px;
+     }
+     &-title {
+          margin-bottom: 20px;
+     }
+     &-desc {
+          margin-bottom: 45px;
+     }
+     &-dots {
+          margin-bottom: 25px;
+     }
+     & .button {
+          margin-bottom: 25px;
+     }
+     @media screen and (max-width: 1023px) {
+          margin-top: 160px;
+          &-list {
+               grid-template-columns: 50%;
+               grid-template-rows: auto;
+               grid-gap: 35px 0;
+          }
+          &-item {
+               grid-row: unset !important;
+               grid-column: unset !important;
+          }
+     }
+     
+     @media screen and (max-width: 767px) {
+          &-list {
+               grid-template-columns: 100%;
+          }
+     }
+     
+}

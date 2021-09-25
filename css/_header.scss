@@ -1,0 +1,122 @@
+.header {
+     padding-top: 55px;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     &-right {
+          display: flex;
+          align-items: center;
+
+          margin-left: auto;
+     }
+     &-list {
+          display: flex;
+          align-items: center;
+     }
+     &-item {
+          margin-right: 50px;
+     }
+     &-link {
+          color: $Very-Dark-Blue;
+          text-transform: uppercase;
+          transition: all 0.2s linear;
+     }
+     &-link:hover {
+          color: $Soft-Red;
+     }
+     &-social {
+          margin-top: auto;
+          // margin-bottom: 45px;
+          display: none;
+          & a:first-child {
+               margin-right: 45px;
+          }
+     }
+     &-mobile {
+          padding-top: 55px;
+          display: none;
+          justify-content: space-between;
+          align-items: center;
+     }
+     @media screen and (max-width: 767px) {
+          &-mobile {
+               padding-top: 30px;
+               display: flex;
+          }
+          &-social {
+               display: flex;
+          }
+          padding: 55px 0;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: unset;
+          position: fixed;
+          top: 0;
+          right: 0;
+          left: 0;
+          bottom: 0;
+          background-color: rgba($Very-Dark-Blue,0.9);
+          z-index: 99999999;
+          transform: translateX(100%);
+          &-logo {
+               &-circle {
+                    fill: white;
+               }
+               &-inner {
+                    fill: $Very-Dark-Blue;
+               }
+               &-text {
+                    fill: white;
+               }
+          }
+          &-left {
+               width: 80%;
+               display: flex;
+               align-items: center;
+               justify-content: space-between;
+          }
+          &-right {
+               display: flex;
+               flex-direction: column;
+               width: 80%;
+               margin-left: 0;
+          }
+          &-list {
+               width: 100%;
+               margin-top: 50px;
+               flex-direction: column;
+               align-items: center;
+               justify-content: center;
+          }
+          &-item {
+               width: 100%;
+               border-top: 1px solid #D3D3D3;
+               padding: 25px 0;
+               margin-right: 0;      
+               text-align: center;
+               letter-spacing: 0.2rem;
+          }
+          &-item:last-child {
+               border-bottom: 1px solid #eee;
+          }
+          &-link {
+               color: white;
+          }
+          & .button {
+               margin-top: 25px;
+               width: 100%;
+               background-color: transparent;
+               text-align: center;
+               border: 2px solid #eee;
+               font-weight: 600;
+               letter-spacing: 0.3rem;
+          }
+          .toggle-hamburger {
+               display: block;
+          }
+     }
+}
+.toggle-hamburger {
+     display: none;
+}

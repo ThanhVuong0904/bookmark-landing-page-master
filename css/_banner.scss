@@ -1,0 +1,95 @@
+.banner {
+     padding-top: 120px;
+     display: flex;
+     align-items: center;
+     position: relative;
+     &-heading {
+          font-size: 45px;
+          font-weight: 500;
+          color: $Very-Dark-Blue;
+          margin-bottom: 40px;
+     }
+     &-desc {
+          font-size: 18px;
+          line-height: 1.4;
+          font-weight: 300;
+          color: $Grayish-Blue;
+          margin-bottom: 40px;
+     }
+     &-links .button:not(:last-child) {
+          margin-right: 15px;
+     }
+     &-image {
+          transform: translateX(100px);
+     }
+     &-info {
+          width: 40%;
+     }
+     .wrap-image {
+          width: 60%;
+          position: relative;
+          z-index: 1;
+     }
+     
+     .wrap-image::before {
+          content: "";
+          position: absolute;
+          background-color: $Soft-Blue;
+          border-radius: 70% 0 0 70% / 100%;
+          width: 80%;
+          right: -162px;
+          bottom: -50px;
+          height: 80%;
+          z-index: -1;
+     }
+     @media screen and (max-width: 1279px) {
+          padding-top: 80px;
+          flex-direction: column-reverse;
+          text-align: center;
+          &-image {
+               transform: unset;
+          }
+          &-heading {
+               font-size: 35px;
+          }
+          &-info {
+               margin-top: 100px;
+               width: 100%;
+          }
+          .wrap-image {
+               display: flex;
+               justify-content: center;
+               width: unset;
+          }
+          .wrap-image::before {
+               width: 100%;
+               right: -20%;
+               bottom: -10px;
+          }
+     }
+     @media screen and (max-width: 1023px) {
+          &-info {
+               margin-top: 30px;
+          }
+     }
+     @media screen and (max-width: 767px) {
+          &-heading {
+               font-size: 28px;
+          }
+          &-desc {
+               font-size: 17px;
+               line-height: 1.7;
+          }
+          .wrap-image::before {
+               bottom: -10px;
+          }
+     }
+     @media screen and (max-width: 320px) {
+          &-heading {
+               font-size: 24px;
+          }
+          &-desc {
+               font-size: 15px;
+          }
+     }
+}
